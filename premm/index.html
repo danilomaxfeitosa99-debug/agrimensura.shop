@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Rövid szerkesztőségi olvasmány figyelemről, reggelekről és egy apró részletről." />
+    <title>Reggeli Jegyzet | Egy apró részlet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      /* Stílusfilozófia: modern közép-európai kultúrmagazin. A sötét grafit, a meleg
+         okker és a levélzöld egymásra rétegzett, aszimmetrikus szerkezettel dolgozik. */
+      :root{--ink:#202522;--coal:#151918;--paper:#f3f0e9;--white:#fffcf6;--line:#d8d5cb;--sage:#36785d;--sage-deep:#1d4f3c;--ochre:#cd8b39;--pale:#ece9df;--ease:cubic-bezier(.23,1,.32,1)}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:"Work Sans",Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}a{color:inherit}img{display:block;max-width:100%}
+      .newsbar{display:flex;justify-content:space-between;gap:20px;padding:9px max(20px,calc((100vw - 1320px)/2));color:#dfe6dd;background:var(--coal);font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase}.newsbar span:last-child{color:#aab9ac}
+      .header{border-bottom:1px solid var(--line);background:var(--paper)}.header-inner{width:min(1320px,calc(100% - 40px));margin:auto;display:flex;align-items:center;justify-content:space-between;min-height:86px;gap:20px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none}.brand-symbol{width:26px;height:26px;border:2px solid var(--sage-deep);border-radius:50% 50% 50% 4px;transform:rotate(-45deg)}.brand-name{font-family:"Playfair Display",Georgia,serif;font-size:25px;font-weight:700;letter-spacing:-.05em}.header-side{color:#6d746f;font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.08em;text-align:right;text-transform:uppercase}.tag{padding:7px 10px;border:1px solid #bac6ba;color:var(--sage-deep);font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+      .frame{display:grid;grid-template-columns:minmax(45px,1fr) minmax(0,850px) minmax(45px,1fr);min-height:600px}.rail{padding-top:26px;border-right:1px solid var(--line);color:#69726c;font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;writing-mode:vertical-rl;transform:rotate(180deg);text-align:left}.rail:last-child{border-right:0;border-left:1px solid var(--line);transform:none}.article{padding:55px clamp(20px,5.5vw,65px) 0}.eyebrow{display:flex;align-items:center;gap:10px;color:var(--sage-deep);font-family:"DM Mono",monospace;font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}.eyebrow:before{content:"";width:29px;height:2px;background:var(--ochre)}h1,h2{font-family:"Playfair Display",Georgia,serif}h1{max-width:770px;margin:17px 0 21px;font-size:clamp(38px,6.1vw,67px);letter-spacing:-.06em;line-height:.99}h2{margin:0 0 16px;font-size:clamp(28px,4.2vw,43px);letter-spacing:-.045em;line-height:1.1}.intro{max-width:630px;margin:0;color:#47514a;font-family:"Playfair Display",Georgia,serif;font-size:clamp(19px,2.4vw,24px);font-style:italic;font-weight:600;line-height:1.42}.meta{display:flex;justify-content:space-between;gap:16px;margin:30px 0;padding:13px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:#727a74;font-family:"DM Mono",monospace;font-size:10px;letter-spacing:.04em}.meta strong{color:var(--ink)}
+      .image-link{display:block;margin:34px 0 12px;text-decoration:none;outline:0}.image-link img{width:100%;padding:4px;border:3px dashed #4fa778;border-radius:2px;background:var(--white);transition:transform .22s var(--ease),box-shadow .22s var(--ease),border-color .22s var(--ease)}.image-link:hover img,.image-link:focus-visible img{border-color:var(--sage-deep);box-shadow:0 16px 35px rgba(23,65,47,.18);transform:translateY(-3px)}.caption{display:block;color:#6f7670;font-size:11px;line-height:1.4}.caption:before{content:"FOTÓ / ";color:var(--ochre);font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.08em}
+      .copy{max-width:655px;margin:47px auto 0}.copy p{margin:0 0 22px;font-size:17px}.copy p strong{color:#1c3429}.quote{position:relative;max-width:710px;margin:42px 0 43px;padding:24px 27px 24px 35px;border-left:5px solid var(--ochre);background:#f9f6ee}.quote:before{position:absolute;top:-9px;left:18px;color:var(--ochre);content:"“";font-family:"Playfair Display",Georgia,serif;font-size:57px;line-height:1}.quote p{margin:0;color:#26362e;font-family:"Playfair Display",Georgia,serif;font-size:clamp(21px,3vw,27px);font-weight:600;line-height:1.33}
+      .reveal{max-width:710px;margin:55px auto;padding:28px;border-top:2px solid var(--coal);border-bottom:1px solid var(--line)}.reveal-label{display:block;margin-bottom:10px;color:var(--sage-deep);font-family:"DM Mono",monospace;font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}.reveal p{max-width:620px;margin:0;color:#47524b;font-size:17px}.cta-wrap{text-align:center;margin:34px auto 44px}.cta{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:16px 24px;border:0;border-radius:3px;color:#fff;background:var(--sage);box-shadow:0 6px 0 var(--sage-deep),0 13px 24px rgba(29,79,60,.16);font-family:"Work Sans",Arial,sans-serif;font-size:15px;font-weight:700;line-height:1.25;text-align:center;text-decoration:none;transition:transform .18s var(--ease),background .18s var(--ease),box-shadow .18s var(--ease)}.cta:after{content:"→";font-family:Georgia,serif;font-size:21px}.cta:hover,.cta:focus-visible{background:var(--sage-deep);box-shadow:0 4px 0 #123629,0 16px 25px rgba(29,79,60,.23);transform:translateY(2px)}.cta:active{transform:translateY(5px) scale(.98);box-shadow:0 1px 0 #123629}.cta-note{display:block;margin-top:13px;color:#747a75;font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.05em}@media(prefers-reduced-motion:no-preference){.cta{animation:signal 2.6s ease-in-out infinite}}@keyframes signal{0%,100%{box-shadow:0 6px 0 var(--sage-deep),0 13px 24px rgba(29,79,60,.16)}50%{box-shadow:0 6px 0 var(--sage-deep),0 13px 0 7px rgba(79,167,120,.13),0 16px 27px rgba(29,79,60,.18)}}
+      .ending{position:relative;max-width:850px;margin:62px auto 0;padding:45px clamp(24px,6vw,58px);overflow:hidden;background:var(--coal);color:#f7f4ec}.ending:after{position:absolute;right:-66px;bottom:-100px;width:290px;height:290px;border:1px solid rgba(198,216,195,.2);border-radius:50%;content:"";box-shadow:0 0 0 28px rgba(198,216,195,.06),0 0 0 57px rgba(198,216,195,.04)}.ending>*{position:relative;z-index:1}.ending .eyebrow{color:#bee0c8}.ending .eyebrow:before{background:var(--ochre)}.ending h2{max-width:600px;margin-top:14px;color:#fffdf6}.ending p{max-width:570px;margin:0 0 25px;color:#c9d1cb;font-size:16px}.ending .cta{color:#153e2e;background:#ddeecf;box-shadow:0 6px 0 #afc994,0 13px 26px rgba(0,0,0,.22)}.ending .cta:hover,.ending .cta:focus-visible{background:#fff1c9;box-shadow:0 4px 0 #afc994,0 17px 29px rgba(0,0,0,.3)}.ending .cta-note{color:#aebbb1}.legal-inline{margin-top:25px!important;color:#9aa99e!important;font-size:11px!important;line-height:1.6!important}
+      footer{padding:37px 0 46px;color:#c8d1ca;background:#111715}.footer-inner{width:min(1180px,calc(100% - 40px));margin:auto}.footer-top{display:grid;grid-template-columns:1.35fr .75fr 1fr;gap:34px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.13)}.footer-title{margin:0 0 8px;color:#fff;font-family:"Playfair Display",Georgia,serif;font-size:22px;font-weight:700;letter-spacing:-.035em}.footer-text,.footer-list{margin:0;font-size:12px;line-height:1.7}.footer-list{padding:0;list-style:none}.footer-list a{color:#c8d1ca;text-decoration:none}.footer-list a:hover,.footer-list a:focus-visible{color:#fff;text-decoration:underline}.footer-heading{margin:0 0 9px;color:#fff;font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase}footer strong{color:#fff}.disclaimer{margin-top:24px;padding:18px 20px;border:1px solid rgba(222,239,218,.18);border-radius:3px;background:rgba(255,255,255,.035);color:#bac5bd}.disclaimer p{margin:0;font-size:11px;line-height:1.7}.disclaimer p+p{margin-top:9px}.footer-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:20px;color:#8f9c93;font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.03em}
+      @media(max-width:720px){.newsbar span:last-child{display:none}.header-inner{min-height:73px}.header-side{display:none}.frame{display:block}.rail{display:none}.article{padding:40px 20px 0}h1{font-size:40px}.copy{margin-top:35px}.copy p{font-size:16px}.ending{margin-right:-20px;margin-left:-20px}.footer-top{grid-template-columns:1fr;gap:23px}.footer-bottom{flex-direction:column;gap:8px}}
+    </style>
+  </head>
+  <body>
+    <div class="newsbar"><span>Szerkesztőségi olvasmány · 2026</span><span>Figyelem · jelenlét · hétköznapi részletek</span></div>
+    <header class="header"><div class="header-inner"><a class="brand" href="#eleje" aria-label="Reggeli Jegyzet, vissza az elejére"><span class="brand-symbol" aria-hidden="true"></span><span class="brand-name">Reggeli Jegyzet</span></a><span class="tag">Rövid olvasmány</span><span class="header-side">Magyar kiadás<br />27 · 08 · 2026</span></div></header>
+    <div class="frame">
+      <aside class="rail">Egy apró részlet</aside>
+      <main class="article" id="eleje">
+        <article>
+          <div class="eyebrow">Egy váratlan felfedezés</div>
+          <h1>Amikor a nevek, a kulcsok és a félbehagyott mondatok túl gyakran tűnnek el...</h1>
+          <p class="intro">Egy régi konyhai felfedezés most azok figyelmét is felkeltette, akik nem akarják egyszerűen legyintéssel elintézni ezeket a pillanatokat.</p>
+          <div class="meta"><span>A <strong>Reggeli Jegyzet</strong> szerkesztősége</span><time datetime="2026-08-27">2026. augusztus 27.</time></div>
+
+          <a class="image-link" href="https://lp.agrimensura.shop/preclick" aria-label="Ugrás az ingyenes recepthez"><img src="images/hero.jpg" alt="Magyar nő egy régi képeslapot néz az ablak mellett" /><span class="caption">Egy elfelejtett név néha csak egy pillanat. De mi van, ha túl gyakran történik meg?</span></a>
+
+          <div class="copy">
+            <p>Eleinte csak apróságok. Egy név, amely nem jut eszünkbe. Az ok, amiért beléptünk egy szobába. Egy üzenet, amelyet biztosan meg akartunk írni.</p>
+            <p>Azután egy különös történet kezdett felbukkanni egy egyszerű reggeli recept körül. <strong>Nem kapszula. Nem bonyolult készítmény. Csak egy hétköznapi konyhai összeállítás.</strong></p>
+          </div>
+
+          <div class="quote"><p>„A legérdekesebb hozzávaló nem az, amit elsőként meglátsz a tányéron.”</p></div>
+
+          <div class="cta-wrap"><a class="cta" href="https://lp.agrimensura.shop/preclick">Nézd meg a reggeli felfedezést</a><span class="cta-note">Rövid szerkesztőségi anyag · Ingyenes hozzáférés</span></div>
+
+          <section class="reveal">
+            <span class="reveal-label">A konyhai történet</span>
+            <h2>Az utolsó összetevő miatt lett igazán érdekes</h2>
+            <p>Az összeállítás első pillantásra teljesen hétköznapi. Az a kis részlet azonban, amely a végén kerül elő, egészen más irányba viszi a történetet.</p>
+          </section>
+
+          <a class="image-link" href="https://lp.agrimensura.shop/preclick" aria-label="Ugrás az ingyenes recepthez"><img src="images/detail.jpg" alt="Rézkulcs, képeslap, töltőtoll és tea egy faasztalon" loading="lazy" /><span class="caption">A válasz nem egy drága vagy nehezen beszerezhető dologban rejtőzik.</span></a>
+
+          <div class="copy">
+            <p>Talán éppen ezért érdemes végignézni a rövid anyagot. Nem mond el mindent az elején — és éppen a végén derül ki, melyik egyszerű hozzávalóról van szó.</p>
+          </div>
+
+          <div class="cta-wrap"><a class="cta" href="https://lp.agrimensura.shop/preclick">Mutasd azt az egy összetevőt</a><span class="cta-note">A felfedezés a rövid anyag végén látható</span></div>
+
+          <section class="ending" id="recept">
+            <div class="eyebrow">A teljes történet</div>
+            <h2>Van egy részlet, amelyet érdemes megnézni</h2>
+            <p>Nyisd meg az ingyenes rövid anyagot, és nézd meg, melyik egyszerű konyhai hozzávaló köré épül ez a különös reggeli felfedezés.</p>
+            <a class="cta" href="https://lp.agrimensura.shop/preclick">Megnézem a teljes receptet</a>
+            <span class="cta-note">Ingyenes tartalom </span>
+          </section>
+        </article>
+      </main>
+      <aside class="rail">Szerkesztőségi jegyzet</aside>
+    </div>
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div><p class="footer-title">Reggeli Jegyzet</p><p class="footer-text">Rövid szerkesztőségi történetek hétköznapi részletekről, figyelemről és nyugodt rutinokról. A tartalom kizárólag általános tájékoztatási célokat szolgál.</p></div>
+          <div><p class="footer-heading">Információk</p><ul class="footer-list"><li><a href="terms.html">Felhasználási feltételek</a></li><li><a href="privacy.html">Adatvédelmi tájékoztató</a></li></ul></div>
+          <div><p class="footer-heading">Üzemeltető adatai</p><p class="footer-text"><strong>NORMAL AGRIMENSURA LTDA - ME</strong><br />CNPJ: 56.301.493/0001-54<br />Belo Horizonte, MG · Brazília</p></div>
+        </div>
+        <div class="disclaimer"><p><strong>Átláthatósági nyilatkozat.</strong> Ez az oldal szerkesztőségi anyagokat közöl hétköznapi szokásokról. A közölt információk nem minősülnek egészségügyi tanácsadásnak, és nem helyettesítik képzett szakember értékelését.</p><p><strong>Felelős üzemeltető:</strong> NORMAL AGRIMENSURA LTDA - ME · CNPJ 56.301.493/0001-54 · Székhely: R. Titânio, 280, Apto. 203, Bl. 16, Camargos, Belo Horizonte – MG, CEP 30520-150, Brazília.</p></div>
+        <div class="footer-bottom"><span>© 2026 Reggeli Jegyzet. Minden jog fenntartva.</span><span>Szerkesztőségi tartalom · Nem egészségügyi tanács</span></div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="https://lp.agrimensura.shop/pretrack.js?rtkcmpid=6a8fda67866f56d3fc69e20f"></script>
+  </body>
+</html>
